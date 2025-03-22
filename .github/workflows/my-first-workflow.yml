@@ -3,7 +3,7 @@ name: My First Workflow
 on:
   push:
     branches:
-      -main
+      - main
 
 jobs:
   build:
@@ -13,10 +13,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-        - name: Use Node.js 18
-          uses: actions/setup-node@v3
-          with:
-            node-version:'18'
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-        - name: Print a Message
-          run: echo "Hello, World!!"
+      - name: Print a Message
+        run: echo "Hello, World!!"
